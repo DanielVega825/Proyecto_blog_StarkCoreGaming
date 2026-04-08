@@ -7,16 +7,16 @@
     align-items: center;
     gap: var(--space-xs);
     padding: 0.75rem 1.75rem;
-    border-radius: var(--radius-full);
+    border-radius: 20px;
     font-weight: 600;
     font-size: 0.95rem;
-    /* transition → efecto suave al hacer hover
-     Curso: sección "Transiciones", 10:43:28 */
-    transition: transform var(--transition-fast),
-        box-shadow var(--transition-fast),
-        background var(--transition-fast);
+    background-color: rgb(151, 75, 250);
+    text-align: center;
 }
 
+.btn__text {
+    text-align: center;
+}
 
 .container-contacto {
     margin: auto;
@@ -61,7 +61,6 @@
     color: #a0a3b8;
 }
 
-/* Estilos de los campos de formulario */
 .form-input {
     background: #12142e;
     border: 1px solid #6c63ff40;
@@ -69,17 +68,9 @@
     padding: 0.8rem 1.1rem;
     color: #ffffff;
     font-size: 0.95rem;
-    /* outline: se controla en focus para accesibilidad
-     Curso: sección "Contorno (outline)", 11:16:34 */
     outline: none;
 }
 
-/* Pseudoclase :focus → campo seleccionado por el usuario
-   Curso: sección "Pseudoclases", 9:04:51 */
-.form-input:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
-}
 
 .form-textarea {
     resize: vertical;
