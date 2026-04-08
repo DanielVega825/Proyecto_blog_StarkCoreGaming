@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,26 +6,25 @@
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="index.css">
     <title>Stark Core Gaming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <nav class="navbar-container">
-        <div class="logo">
-            Stark Core Gaming
-        </div>
+  <nav class="navbar-container">
+    <div class="logo">
+        <img src="img/logo.png" alt="Logo Stark Core" class="logo-img">
+        
+        Stark Core Gaming 
+    </div>
+</nav>
         <div class="links-container">
             <a href="index.html">Inicio</a>
             <a href="quienessomos.html">¿Quienes somos?</a>
             <a href="contacto.html">Contacto</a>
-        </div>        
+        </div>
     </nav>
 
-    <!-- Contenido acá -->
-
     <div class="main-content">
-
-        <p class="introduction">Bienvenido a Stark Core Gaming, tu destino para la mejor experiencia de juego.</p>
-        
         <div class="carrusel">
             <div class="pista">
                 <img src="./img1.jpg" class="slide activo">
@@ -34,16 +32,40 @@
                 <img src="./img3.jpg" class="slide">
             </div>
             <div class="controles">
-                <button id="anterior">⬅</button>
-                <button id="siguiente">➡</button>
+                <button id="anterior" type="button">⬅</button>
+                <button id="siguiente" type="button">➡</button>
             </div>
         </div>
-        
+
+        <div class="contenedor-columnas">
+          <div class="contenedor-columnas">
+            <section class="seccion-juegos">
+                <h2 class="titulo-seccion">Novedades del Día 🎮</h2>
+                <div class="lista-items">
+                    <a href="https://store.steampowered.com/agecheck/app/1245620/" class="item-link">Elden Ring</a>
+                    <a href="https://bethesda.net/es/game/starfield" class="item-link">Starfield</a>
+                    <a href="https://store.steampowered.com/agecheck/app/1091500/" class="item-link">Cyberpunk 2077</a>
+                    <a href="https://store.steampowered.com/app/1240440/Halo_Infinite/" class="item-link">Halo Infinite</a>
+                </div>
+            </section>
+
+            <section class="seccion-noticias">
+                <h2 class="titulo-seccion">Noticias y Eventos 📰</h2>
+                <div class="lista-items">
+                    <article class="tarjeta-evento">
+                        <h3>Gran Evento de Tecnología</h3>
+                        <p>¡Co Crea 5.0 Bogotá!</p>
+                    </article>
+                    <article class="tarjeta-evento">                        
+                        <p>Explorando las últimas tendencias en el desarrollo de videojuegos.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
     </div>
 
-    <!-- fin contenido -->
-
     <footer class="footer-container">
+          <footer class="footer-container">
         <span class="logo-email-container">
             <span class="footer-logo-name">Stark Core Gaming</span>
             <span class="blog-email">blog@starkcoregaming.com</span>
@@ -56,6 +78,33 @@
             <li>Yesica González</li>
         </ul>
     </footer>
-    <script src="index.js"></script>    
+
+            <div class="footer-right">
+                <div class="social-icons">
+                    <a href="#" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" title="Email"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="#" title="Teléfono"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            let indice = 0;
+
+            const mover = (paso) => {
+                slides[indice].classList.remove('activo');
+                indice = (indice + paso + slides.length) % slides.length;
+                slides[indice].classList.add('activo');
+            };
+
+            document.getElementById('siguiente').onclick = () => mover(1);
+            document.getElementById('anterior').onclick = () => mover(-1);
+        });
+    </script>
 </body>
 </html>

@@ -1,63 +1,338 @@
-.main-content {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #2e1f1f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* --- Navegación --- */
+.navbar-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100%;
+    padding: 20px 8%;
+    background: #000;
+    border-bottom: 2px solid #D4AF37;
+}
+
+.logo {
+    color: #D4AF37;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.links-container a {
+    color: #4a3333;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.links-container a:hover {
+    color: #D4AF37;
+}
+
+
+.main-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #0a0a0a; 
+}
+
+.carrusel {
+    position: relative;
     width: 100%;
+    height: 250px; 
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px; 
+    border: 1px solid #333;
+    background-color: #000;
+}
 
-    .introduction {
-        font-size: 1.5rem;
-        padding: 0 0 3rem;
-    }
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
 
-    .carrusel {
-        max-width: 600px;
-        max-height: 800px;
-        margin: 0 auto;
-    }
+.slide.activo {
+    display: block;
+}
 
-    .pista {
-        position: relative;
+.controles button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #D4AF37;
+    border: 1px solid #D4AF37;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.3s;
+}
 
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
+.controles button:hover {
+    background: #D4AF37;
+    color: #000;
+}
 
-    .slide {
-        display: none;
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 12px;
-    }
+#anterior { left: 15px; }
+#siguiente { right: 15px; }
 
-    .slide.activo {
-        display: block;
-    }
 
-    .controles {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-        margin-top: 10px;
-    }
+.contenedor-columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; 
+    background: linear-gradient(180deg, #151515 0%, #050505 100%);
+    padding: 40px; 
+    border-radius: 15px;
+    border: 1px solid #222;
+}
 
-    #anterior,
-    #siguiente {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        border: 1px solid #ccc;
-        background: white;
-        cursor: pointer;
-        font-size: 16px;
-    }
+.seccion-juegos, .seccion-noticias {
+    width: 48%;
+}
 
-    #anterior:hover,
-    #siguiente:hover {
-        background: #eee;
-    }
+.titulo-seccion {
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* --- Enlaces de Juegos --- */
+.item-link {
+    display: block;
+    background: #1a1a1a;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #bbb;
+    border-left: 3px solid #D4AF37;
+    transition: all 0.3s ease;
+}
+
+.item-link:hover {
+    background: #222;
+    transform: translateX(5px);
+    color: #D4AF37;
+}
+
+.tarjeta-evento {
+    background: #1a1a1a;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.tarjeta-evento h3 {
+    color: #D4AF37;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.tarjeta-evento p {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.footer-container {
+    background: #000;
+    padding: 40px 0;
+    border-top: 1px solid #D4AF37;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.stark-brand {
+    color: #D4AF37;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.lista-nombres-footer {
+    list-style: none;
+    text-align: left;
+}
+
+.lista-nombres-footer li {
+    color: #777;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #888;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #D4AF37;
+}* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fondo total de la página */
+html, body {
+    background-color: #050505; /* Un negro más profundo */
+    color: #eeeeee; /* Texto claro para que se lea bien */
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+/* --- Navegación --- */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: #000;
+    border-bottom: 2px solid #D4AF37;
+    position: sticky; /* Se queda arriba al bajar */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #D4AF37;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+}
+
+.links-container a {
+    color: #ffffff; /* Letras blancas para el menú */
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.links-container a:hover {
+    color: #D4AF37;
+}
+
+/* --- Contenido --- */
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- Carrusel --- */
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Un poco más alto para que luzca */
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 50px; 
+    border: 1px solid #D4AF37; /* Borde dorado sutil */
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que la imagen llene el espacio */
+}
+
+.slide.activo {
+    display: block;
+}
+
+/* --- Secciones de Columnas --- */
+.contenedor-columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.seccion-juegos, .seccion-noticias {
+    flex: 1; /* Se dividen el espacio igualitariamente */
+    background: #111; /* Gris muy oscuro */
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #222;
+}
+
+.titulo-seccion {
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+/* --- Botones de Juegos --- */
+.item-link {
+    display: block;
+    background: #1a1a1a;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    border-left: 4px solid #D4AF37;
+    transition: 0.3s;
+}
+
+.item-link:hover {
+    background: #252525;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.tarjeta-evento {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
 }
