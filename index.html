@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index.css">
     <title>Stark Core Gaming</title>
 </head>
 <body>
@@ -22,7 +23,23 @@
 
     <!-- Contenido acá -->
 
-    <h1>inicio</h1>
+    <div class="main-content">
+
+        <p class="introduction">Bienvenido a Stark Core Gaming, tu destino para la mejor experiencia de juego.</p>
+        
+        <div class="carrusel">
+            <div class="pista">
+                <img src="./img1.jpg" class="slide activo">
+                <img src="./img2.jpg" class="slide">
+                <img src="./img3.jpg" class="slide">
+            </div>
+            <div class="controles">
+                <button id="anterior">⬅</button>
+                <button id="siguiente">➡</button>
+            </div>
+        </div>
+        
+    </div>
 
     <!-- fin contenido -->
 
@@ -38,6 +55,7 @@
             <li>Leider Quintero</li>
             <li>Yesica González</li>
         </ul>
-    </footer>    
+    </footer>
+    <script src="index.js"></script>    
 </body>
 </html>
