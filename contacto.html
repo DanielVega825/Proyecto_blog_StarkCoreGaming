@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="contacto.css">
@@ -23,7 +26,95 @@
 
     <!-- Contenido acá -->
 
-    <h1>contacto</h1>
+    <section class="contacto">
+        <div class="container-contacto">
+            <div class="header-contacto">
+                <span>Enterate de las noticias de video juegos</span>
+                <h1>Contactanos</h1>
+                <p>Cuéntanos que información te parecio importante de nuestro blog y te responderemos en menos de 24 horas</p>
+                
+
+            </div>
+
+            <div class="contact__grid">
+                <div class="contact__info">
+                    <h2 class="contact__info-title">¿Quieres recibir más información?</h2>
+                    <p class="contact__info-text">
+                        Enterate del mundo de los videojuegos y además cuentanos que información podemos añadir y mejorar
+                    </p>
+                    <ul class="contact__details">
+                        <li class="contact__detail">
+                            <div class="contact__detail-icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="">Starkcoregaming@email.com</a>
+                            </div>
+                        </li>
+                        <li class="contact__detail">
+                            <div class="contact__detail-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <a href="">+57 0000000000</a>
+                            </div>
+                        </li>
+                        <li class="contact__detail">
+                            <div class="contact__detail-icon">
+                                <i class="fa-solid fa-location-crosshairs"></i>
+                            </div>
+                            <div>
+                                <strong>Oficina</strong>
+                                <a href="">Bogotá Colombia</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+
+                <div class="contact__form-wrap">
+                    <form action="" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="" class="form-label">Nombre *</label>
+                                <input type="text" name="name" id="" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="form-label">Email *</label>
+                                <input type="email" name="name" id="" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="contactMessage" class="form-label">Mensaje *</label>
+                                <textarea
+                                id="contactMessage"
+                                name="message"
+                                class="form-input form-textarea"
+                                placeholder="Cuéntanos sobre tu proyecto, tus objetivos y cómo podemos ayudarte..."
+                                rows="5"
+                                required
+                                ></textarea>
+                                <span class="form-error" id="messageError" role="alert"></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                            <span class="btn__text">Enviar mensaje</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+
+        </div>
+        
+    </section>
 
     <!-- fin contenido -->
 
