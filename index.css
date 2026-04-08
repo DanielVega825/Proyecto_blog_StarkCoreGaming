@@ -10,8 +10,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
 }
-
-/* --- Navegación --- */
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -208,10 +206,9 @@ body {
     padding: 0;
 }
 
-/* Fondo total de la página */
 html, body {
-    background-color: #050505; /* Un negro más profundo */
-    color: #eeeeee; /* Texto claro para que se lea bien */
+    background-color: #050505; 
+    color: #eeeeee; 
     font-family: 'Segoe UI', sans-serif;
     min-height: 100vh;
 }
@@ -224,7 +221,7 @@ html, body {
     padding: 15px 8%;
     background: #000;
     border-bottom: 2px solid #D4AF37;
-    position: sticky; /* Se queda arriba al bajar */
+    position: sticky; 
     top: 0;
     z-index: 1000;
 }
@@ -240,13 +237,15 @@ html, body {
     text-transform: uppercase;
 }
 
+ /* formato logo */
+
 .logo-img {
     height: 45px;
     width: auto;
 }
 
 .links-container a {
-    color: #ffffff; /* Letras blancas para el menú */
+    color: #ffffff; 
     text-decoration: none;
     margin-left: 25px;
     font-size: 0.9rem;
@@ -258,22 +257,22 @@ html, body {
     color: #D4AF37;
 }
 
-/* --- Contenido --- */
+
 .main-content {
     max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* --- Carrusel --- */
+
 .carrusel {
     position: relative;
     width: 100%;
-    height: 350px; /* Un poco más alto para que luzca */
+    height: 350px; 
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 50px; 
-    border: 1px solid #D4AF37; /* Borde dorado sutil */
+    border: 1px solid #D4AF37; 
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
 }
 
@@ -281,14 +280,13 @@ html, body {
     display: none;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Esto hace que la imagen llene el espacio */
+    object-fit: cover; /
 }
 
 .slide.activo {
     display: block;
 }
 
-/* --- Secciones de Columnas --- */
 .contenedor-columnas {
     display: flex;
     justify-content: space-between;
@@ -296,8 +294,8 @@ html, body {
 }
 
 .seccion-juegos, .seccion-noticias {
-    flex: 1; /* Se dividen el espacio igualitariamente */
-    background: #111; /* Gris muy oscuro */
+    flex: 1; 
+    background: #111; 
     padding: 25px;
     border-radius: 15px;
     border: 1px solid #222;
@@ -311,7 +309,6 @@ html, body {
     padding-bottom: 10px;
 }
 
-/* --- Botones de Juegos --- */
 .item-link {
     display: block;
     background: #1a1a1a;
